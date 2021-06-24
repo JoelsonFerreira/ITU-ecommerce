@@ -2,8 +2,6 @@
 
 Trabalho apresentado a disciplina de Programação para internet, ministrada pelo professor Carlos Bazílio. O projeto consiste em um modelo de e-commerce simples e minimalista.
 
-## Tabela de conteúdos
-
 1. [Tecnologias](#tecnologias)
 1. [Features](#features)
 1. [Requisitos](#requisitos)
@@ -11,7 +9,7 @@ Trabalho apresentado a disciplina de Programação para internet, ministrada pel
 1. [Alunos](#alunos)
 1. [Preview](#preview)
 
-### Tecnologias
+## Tecnologias
 
 * HTML5
 * CSS3
@@ -19,17 +17,17 @@ Trabalho apresentado a disciplina de Programação para internet, ministrada pel
 * Nodejs ou PHP?
 * MySQL?
 
-### Features
+## Features
 
 * [ ] Listagem de produtos
 * [ ] Página de carrinho
 * [ ] Cadastro de produtos
 
-### Requisitos
+## Requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
 
-### Executando a aplicação
+## Executando a aplicação
 
 ```bash
 # Clone este repositório
@@ -54,6 +52,6 @@ $ npm run dev:server
 * David Manuel Porto Nora
 * Rafael da Silva Rodrigues Oliveira
 
-### Preview
+## Preview
 
 [Figma](https://www.figma.com/file/D0IHEBAERXFQFakaBWu5XH/e-commerce)
