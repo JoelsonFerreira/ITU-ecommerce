@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
 
     height: calc(100vh - 60px);
@@ -51,7 +52,7 @@
     display: flex;
     justify-content: space-between;
     width: 400px;
-    margin-top: 50px;
+    margin-top: 0;
 }
 
 /* Primary Logar */
@@ -68,4 +69,17 @@
     border-style: solid;
     border-color: #CCCCCC;
     border-radius: 10x;
+}
+
+.sumPrice
+{
+    padding-left: 280px;
+    color: #CCCCCC;   
+}
+
+.warning
+{
+    margin: 0;
+    color: #FC1919;
+    text-align: center;
 }

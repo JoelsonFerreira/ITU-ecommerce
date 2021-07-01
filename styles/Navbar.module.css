@@ -60,6 +60,7 @@
     width: 30%;
     height: 100%;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .nav_right_cart{

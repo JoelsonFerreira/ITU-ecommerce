@@ -1,5 +1,5 @@
 import styles from '../styles/Navbar.module.css';
-import cartIcon from "../public/images/cart.svg";
+import { BiCart } from 'react-icons/bi';
 
 function NavBar(){ 
     return (
@@ -15,7 +15,7 @@ function NavBar(){
             </div>
             
             <div className ={styles.nav_right}>
-                <img src="/images/cart.svg" width={30} />
+                <BiCart size={30} color="#CCCCCC" />
             </div>
         </nav>
     )
