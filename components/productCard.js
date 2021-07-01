@@ -1,13 +1,15 @@
-// import styles from '../styles/ProductCard.module.css';
+import styles from '../styles/ProductCard.module.css';
 
-function productCard({ title, price, image_url }){ 
+function ProductCard({ title, price, image_url }){ 
     return (
-        <div className="container">
-            <img className="image_url" src={image_url} />
-            <a className="title" >{title}</a>
-            <a className="price" >{price}</a>
+        <div className={styles.container}>
+            <img src={image_url} />
+            <div className={styles.description}>
+                <h3>{title}</h3>
+                <p>{price}</p>
+            </div>
         </div>
     );
 }
 
-export default productCard;
+export default ProductCard;
