@@ -10,7 +10,7 @@ function NavBar(){
 
             <div className ={styles.nav_center}>
                 <div className = {styles.nav_center_search_background}>
-                    <input type="text" className= {styles.nav_center_search} placeholder="Digite..." />
+                    <input type="text" className= {styles.nav_center_search} placeholder="Buscar..." />
                 </div>
             </div>
             
