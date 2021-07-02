@@ -9,7 +9,7 @@ body {
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none;;
 }
 
 * {
@@ -24,5 +24,9 @@ main {
 }
 
 button {
+  cursor: pointer;
+}
+
+.link {
   cursor: pointer;
 }

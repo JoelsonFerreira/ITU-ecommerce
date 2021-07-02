@@ -20,6 +20,8 @@ function CartPage() {
                     />
                 ))
             }
+
+            <div className = {styles.cartEnd}></div>
         </main>
     </div>
 }

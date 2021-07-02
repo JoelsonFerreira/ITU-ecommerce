@@ -1,9 +1,9 @@
 .cart_container{
     display: flex;
     justify-content: space-between;
-    height: 120px;
+    height: 110px;
     width: 100%;
-    padding-top: 10px;
+    margin-top: 20px;
 }
 
 .cart_content{

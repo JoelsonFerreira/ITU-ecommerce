@@ -25,6 +25,7 @@
 
 .nav_left_title{
     color: #CCCCCC;
+    cursor: pointer;
 }
 
 .nav_center{
@@ -38,11 +39,16 @@
 .nav_center_search_background{
     height: 35px;
     width: 400px;
+    padding: 0 20px;
     background-color: #292929;
     border-style: solid;
     border-width: 1px;
     border-color: #CCCCCC;
     border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 }
 

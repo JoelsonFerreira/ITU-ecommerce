@@ -13,11 +13,11 @@ function ProductCart({ title, image_url, price, quant }){
 
         <div className = {styles.cart_content}>
             <div className={styles.productCart_title}>
-                <h1>{ title }</h1>
+                <h3>{ title }</h3>
             </div>
             
             <div className = {styles.productCart_price}>
-                <h2>{ "R$ " + price }</h2>
+                <h4>{ "R$ " + price }</h4>
             </div>
             
             <div className = {styles.cart_MinusPlus}>
