@@ -9,3 +9,25 @@
     width: 80%;
     margin: 0 auto;
 }
+
+.cartEnd{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items:center;
+    height: 100px;
+    width: 100%;
+}
+
+.endButton {
+    background-color: #CCCCCC;
+    color: #212121;
+    font-weight: bold;
+    border: none;
+    width: 200px;
+    height: 50px;
+}
+
+.finalPrice{
+    margin-right: 20px;
+    color: #CCCCCC;
+}
