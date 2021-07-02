@@ -10,3 +10,21 @@
   gap: 50px 0;
   justify-items: center;
 }
+
+@media (max-width: 1200px) {
+  .container main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 950px) {
+  .container main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .container main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
