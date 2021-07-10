@@ -19,9 +19,9 @@ Trabalho apresentado a disciplina de Programação para internet, ministrada pel
 
 ## Features
 
-* [ ] Listagem de produtos
-* [ ] Página de carrinho
-* [ ] Cadastro de produtos
+* [x] Listagem de produtos
+* [x] Página de carrinho
+* [x] Cadastro de produtos
 
 ## Requisitos
 
