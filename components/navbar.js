@@ -9,7 +9,7 @@ function NavBar(){
         <nav className={styles.navbar}>
             <div className={styles.nav_left}>
                 <Link href="/">
-                    <h1 className={styles.nav_left_title}>ITU</h1>
+                    <a><h1 className={styles.nav_left_title}>ITU</h1></a>
                 </Link>
             </div>
 
@@ -22,7 +22,7 @@ function NavBar(){
             
             <div className ={styles.nav_right}>
                 <Link href="/cartPage">
-                    <BiCart size={30} color="#CCCCCC" className = "link"/>
+                    <a><BiCart size={30} color="#CCCCCC" className = "link"/></a>
                 </Link>
             </div>
         </nav>

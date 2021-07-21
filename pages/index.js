@@ -3,9 +3,7 @@ import styles       from '../styles/Home.module.css'
 import NavBar       from '../components/navbar';
 import ProductCard  from '../components/productCard';
 
-import products     from "../data/products";
-
-export default function Home() {
+export default function Home({ products }) {
   return (
     <div className={styles.container}>
       <NavBar />
@@ -24,4 +22,15 @@ export default function Home() {
       </main>
     </div>
   )
+}
+
+export async function getServerSideProps(context) {
+  const response = await fetch("https://itu-server.herokuapp.com/product/")
+  const products = await response.json();
+
+  return {
+    props: {
+      products
+    }, // will be passed to the page component as props
+  }
 }

@@ -11,8 +11,17 @@
     transform: scale(1.02);
 }
 
+.image_container {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+}
+
 .container img {
     width: 100%;
+    height: 100%;
 }
 
 .description {
