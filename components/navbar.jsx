@@ -3,8 +3,13 @@ import { BiCart } from 'react-icons/bi';
 import { GoSearch } from 'react-icons/go';
 
 import Link from 'next/link';
+import { useContext } from 'react';
+import { CartContext } from '../contexts/CartContext';
 
-function NavBar(){ 
+function NavBar() {
+
+    const { cart } = useContext(CartContext);
+
     return (
         <nav className={styles.navbar}>
             <div className={styles.nav_left}>
@@ -22,7 +27,16 @@ function NavBar(){
             
             <div className ={styles.nav_right}>
                 <Link href="/cartPage">
-                    <a><BiCart size={30} color="#CCCCCC" className = "link"/></a>
+                    <a style={{position: "relative"}}>
+                        <BiCart 
+                            size={30} 
+                            color="#CCCCCC" 
+                            className = "link"
+                        />
+                        <div className={styles.counter}>
+                            {cart.length}
+                        </div>
+                    </a>
                 </Link>
             </div>
         </nav>

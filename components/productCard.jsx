@@ -1,8 +1,20 @@
+import { useContext } from 'react';
+import { CartContext } from '../contexts/CartContext';
 import styles from '../styles/ProductCard.module.css';
 
-function ProductCard({ title, price, image_url }){ 
+function ProductCard({ product }){ 
+
+    const { title, price, image_url } = product;
+
+    const { addProduct } = useContext(CartContext);
+
     return (
-        <div className={styles.container}>
+        <div 
+            onClick={() => {
+                addProduct({ id: product["_id"], title, price, image_url, quant: 1 });
+            }} 
+            className={styles.container}
+        >
             <div className={styles.image_container}>
                 <img src={image_url} />
             </div>

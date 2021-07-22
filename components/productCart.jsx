@@ -4,7 +4,9 @@ import {AiFillPlusSquare} from 'react-icons/ai';
 import {AiFillMinusSquare} from 'react-icons/ai';
 import {AiFillCloseCircle} from 'react-icons/ai';
 
-function ProductCart({ title, image_url, price, quant }){
+function ProductCart({ product }){
+    const { title, image_url, price, quant } = product;
+
     return <div className = {styles.cart_container}>
         
         <div className = {styles.cart_image}>

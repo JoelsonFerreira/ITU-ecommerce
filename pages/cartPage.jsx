@@ -6,21 +6,22 @@ import NavBar from '../components/navbar';
 import ProductCart from '../components/productCart';
 
 import products from "../data/products";
+import { useContext } from 'react';
+import { CartContext } from '../contexts/CartContext';
 
 
 
 function CartPage() {
+    const { cart } = useContext(CartContext);
+
     return <div className={styles.container}>
         <NavBar/>
         <main>
             {
-                products.map((prod, index) => (
+                cart.map((prod, index) => (
                     <ProductCart 
                         key={index}
-                        title={prod.title}
-                        image_url={prod.image_url}
-                        price={prod.price}
-                        quant={prod.quant}
+                        product={prod}
                     />
                 ))
             }
