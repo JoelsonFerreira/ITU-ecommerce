@@ -17,6 +17,7 @@ function CartPage() {
     return <div className={styles.container}>
         <NavBar/>
         <main>
+            <div>
             {
                 cart.map((prod, index) => (
                     <ProductCart 
@@ -25,6 +26,7 @@ function CartPage() {
                     />
                 ))
             }
+            </div>
 
             <div className = {styles.cartEnd}>
                 <Link href = "/payPage">

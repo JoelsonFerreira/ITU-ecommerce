@@ -5,8 +5,10 @@
 .container main {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     max-width: 1000px;
     width: 80%;
+    min-height: calc(100vh - 60px);
     margin: 0 auto;
 }
 
