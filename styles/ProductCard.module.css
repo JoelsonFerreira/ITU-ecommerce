@@ -17,6 +17,7 @@
     height: 250px;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .container img {
@@ -35,6 +36,30 @@
     margin: 0;
 }
 
-.description h3 {
-    margin-bottom: 10px;
+.over{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 200ms;
+    width: 100%;
+    height: 100%;
+    background-color:#212121CC;
+
+}
+
+.container:hover .over{
+    opacity: 1;
+}
+
+.buybtn{
+    padding: 1rem 3rem;
+
+    background-color:rgb(202, 202, 202);
+    border: none;
+    color: black;
+    border-radius: 10px;
+    font-weight: 500;
 }

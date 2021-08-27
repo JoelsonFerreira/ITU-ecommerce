@@ -9,13 +9,13 @@ function ProductCard({ product }){
     const { addProduct } = useContext(CartContext);
 
     return (
-        <div 
-            onClick={() => {
-                addProduct({ id: product["_id"], title, price, image_url, quant: 1 });
-            }} 
+        <div  
             className={styles.container}
         >
             <div className={styles.image_container}>
+                <div className = {styles.over}>
+                    <button className = {styles.buybtn} onClick={() => {addProduct({ id: product["_id"], title, price, image_url, quant: 1 });}}>Comprar</button>
+                </div>
                 <img src={image_url} />
             </div>
             <div className={styles.description}>
