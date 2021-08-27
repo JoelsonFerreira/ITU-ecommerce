@@ -2,7 +2,8 @@ import { createContext, useState } from "react";
 
 export const CartContext = createContext({
     cart: [],
-    addProduct: (product) => {}
+    addProduct: (product) => {},
+    removeProduct: (product) => {}
 });
 
 export const CartProvider = ({ children }) => {
@@ -17,10 +18,23 @@ export const CartProvider = ({ children }) => {
 
     }
 
+    const removeProduct = (product) => {
+        const resIndex = cart.findIndex(prod => prod.id == product.id);
+        
+
+        if(resIndex != -1) {
+            const newCart = cart.slice();
+            newCart.splice(resIndex,1)
+            setCart(newCart);
+        }
+
+    }
+
     return (
         <CartContext.Provider value={{
             cart,
-            addProduct
+            addProduct,
+            removeProduct
         }}>
             { children }
         </CartContext.Provider>
