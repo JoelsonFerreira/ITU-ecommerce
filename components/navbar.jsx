@@ -3,25 +3,41 @@ import { BiCart } from 'react-icons/bi';
 import { GoSearch } from 'react-icons/go';
 
 import Link from 'next/link';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { CartContext } from '../contexts/CartContext';
 
-function NavBar() {
+function NavBar({ onSearch }) {
 
     const { cart } = useContext(CartContext);
+
+    const [search, setSearch] = useState("");
 
     return (
         <nav className={styles.navbar}>
             <div className={styles.nav_left}>
                 <Link href="/">
-                    <a><h1 className={styles.nav_left_title}>ITU</h1></a>
+                    <a onClick={() => {
+                        setSearch("");
+                        onSearch("");
+                    }}>
+                        <h1 className={styles.nav_left_title}>ITU</h1>
+                    </a>
                 </Link>
             </div>
 
             <div className ={styles.nav_center}>
                 <div className = {styles.nav_center_search_background}>
-                    <input type="text" className= {styles.nav_center_search} placeholder="Buscar" />
-                    <GoSearch color="#cccccc" />
+                    <input 
+                        type="text" 
+                        className= {styles.nav_center_search} 
+                        placeholder="Buscar" 
+                        value={search}    
+                        onChange={e => {
+                            setSearch(e.target.value);
+                            onSearch(e.target.value);
+                        }}
+                    />
+                    <GoSearch color="#cccccc" onClick={() => onSearch(search)} />
                 </div>
             </div>
             
