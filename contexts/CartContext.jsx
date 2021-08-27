@@ -3,7 +3,9 @@ import { createContext, useState } from "react";
 export const CartContext = createContext({
     cart: [],
     addProduct: (product) => {},
-    removeProduct: (product) => {}
+    removeProduct: (product) => {},
+    incrementProduct: (product,stock_qnt) => {},
+    decrementProduct: (product) => {}
 });
 
 export const CartProvider = ({ children }) => {
@@ -30,11 +32,40 @@ export const CartProvider = ({ children }) => {
 
     }
 
+    const incrementProduct = (product,stock_qnt) => {
+        const resIndex = cart.findIndex(prod => prod.id == product.id);
+        
+
+        if(resIndex != -1 && cart[resIndex].quant < stock_qnt ) {
+            const newCart = cart.slice();
+            newCart[resIndex].quant++;
+            setCart(newCart);
+        }
+        
+    }
+
+    const decrementProduct = (product) => {
+        const resIndex = cart.findIndex(prod => prod.id == product.id);
+        
+
+        if(resIndex != -1) {
+            const newCart = cart.slice();
+            if(newCart[resIndex].quant > 1){
+                newCart[resIndex].quant--;
+                setCart(newCart);
+            }
+
+        }
+        
+    }
+
     return (
         <CartContext.Provider value={{
             cart,
             addProduct,
-            removeProduct
+            removeProduct,
+            incrementProduct,
+            decrementProduct
         }}>
             { children }
         </CartContext.Provider>

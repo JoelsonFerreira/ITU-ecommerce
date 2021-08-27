@@ -8,8 +8,8 @@ import { CartContext } from '../contexts/CartContext';
 
 
 function ProductCart({ product }){
-    const { title, image_url, price, quant } = product;
-    const { removeProduct } = useContext(CartContext);
+    const { title, image_url, price, quant,stock_qnt } = product;
+    const { removeProduct,incrementProduct,decrementProduct } = useContext(CartContext);
 
     return <div className = {styles.cart_container}>
         
@@ -27,10 +27,10 @@ function ProductCart({ product }){
             </div>
             
             <div className = {styles.cart_MinusPlus}>
-                <button><AiFillMinusSquare color="#555555" size={20}/></button>
+                <button onClick = {() => decrementProduct(product)}><AiFillMinusSquare color="#555555" size={20}/></button>
                 
                 <h3 className = {styles.productCart_quant}>{ quant }</h3>
-                <button><AiFillPlusSquare color = "#CCCCCC"size={20}/></button>
+                <button onClick = {() => incrementProduct(product,stock_qnt)}><AiFillPlusSquare color = "#CCCCCC"size={20} /></button>
                 
             </div>
            

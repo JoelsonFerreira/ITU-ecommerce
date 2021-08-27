@@ -14,7 +14,7 @@ function ProductCard({ product }){
         >
             <div className={styles.image_container}>
                 <div className = {styles.over}>
-                    <button className = {styles.buybtn} onClick={() => {addProduct({ id: product["_id"], title, price, image_url, quant: 1 });}}>Comprar</button>
+                    <button className = {styles.buybtn} onClick={() => {addProduct({ id: product["_id"], title, price, image_url, quant: 1,stock_qnt: product.quant });}}>Comprar</button>
                 </div>
                 <img src={image_url} />
             </div>
