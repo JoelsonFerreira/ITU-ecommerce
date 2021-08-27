@@ -4,6 +4,7 @@ import styles from "../styles/Admin.module.css";
 import { useState } from 'react';
 
 import InputMask from "react-input-mask";
+import Link from "next/link";
 
 
 
@@ -32,7 +33,9 @@ function PayPage({ sum_price = 299.99 }){
                     <p className={styles.sumPrice} >Total: R$ {sum_price} </p>
                     
                     <div className={styles.buttonsContainer}>
-                        <button className={styles.secondary_button}>Voltar</button>
+                        <Link href = "cartPage">
+                            <button className={styles.secondary_button}>Voltar</button>
+                        </Link>
                         <button className={styles.primary_button}>Adicionar</button>
                     </div>
                 </form>
