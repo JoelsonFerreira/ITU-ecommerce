@@ -6,6 +6,7 @@ import {AiFillCloseCircle} from 'react-icons/ai';
 import { useContext } from 'react';
 import { CartContext } from '../contexts/CartContext';
 
+
 function ProductCart({ product }){
     const { title, image_url, price, quant } = product;
     const { removeProduct } = useContext(CartContext);

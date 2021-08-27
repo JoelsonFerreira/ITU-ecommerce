@@ -6,7 +6,7 @@ function ProductCard({ product }){
 
     const { title, price, image_url } = product;
 
-    const { addProduct } = useContext(CartContext);
+    const { addProduct} = useContext(CartContext);
 
     return (
         <div  
