@@ -10,7 +10,6 @@ import { useContext } from 'react';
 import { CartContext } from '../contexts/CartContext';
 
 
-
 function CartPage() {
     const { cart } = useContext(CartContext);
 
@@ -32,7 +31,7 @@ function CartPage() {
                 <Link href = "/payPage">
                     <button className={styles.endButton}>Finalizar Compra</button>
                 </Link>
-                <h3 className = {styles.finalPrice}>Total: R$ 5000</h3>
+                <h3 className = {styles.finalPrice}>Total: R$ {cart.reduce((x,v) => x + (v.price * v.quant),0)}</h3>
             </div>
         </main>
     </div>
