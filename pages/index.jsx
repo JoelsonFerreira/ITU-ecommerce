@@ -2,22 +2,45 @@ import styles       from '../styles/Home.module.css'
 
 import NavBar       from '../components/navbar';
 import ProductCard  from '../components/productCard';
+import { useState } from 'react';
 
 export default function Home({ products }) {
+  const [curProducts, setCurProducts] = useState(products);
+  
+  function setProducts(text) {
+    setCurProducts(
+      products.filter(prod => {
+        return prod.title.toUpperCase().includes(text.toUpperCase());
+      })
+    );
+    console.log(curProducts);
+  }
+
   return (
     <div className={styles.container}>
-      <NavBar />
+      <NavBar onSearch={setProducts} />
 
-      <main>
-        {
-          products.map((product, index) => (
-            <ProductCard 
-              key={index} 
-              product={product}
-            />
-          ))
-        }
-      </main>
+      {
+        curProducts.length > 0 ?
+        <main>
+          {
+            curProducts.map((product, index) => (
+              <ProductCard 
+                key={index} 
+                product={product}
+              />
+            ))
+          }
+        </main>
+        : 
+        <h1 style={{
+          color: "white", 
+          textAlign: "center",
+          marginTop: "3rem"
+        }}>
+          Nenhum produto não encontrado
+        </h1>
+      }
     </div>
   )
 }
@@ -29,6 +52,6 @@ export async function getServerSideProps(context) {
   return {
     props: {
       products
-    }, // will be passed to the page component as props
+    }
   }
 }
