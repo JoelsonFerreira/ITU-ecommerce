@@ -5,6 +5,8 @@ import { useState } from 'react';
 
 import InputMask from "react-input-mask";
 
+
+
 function PayPage({ sum_price = 299.99 }){
     const [ phone, setPhone ] = useState("");
 

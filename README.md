@@ -14,8 +14,8 @@ Trabalho apresentado a disciplina de Programação para internet, ministrada pel
 * HTML5
 * CSS3
 * JavaScript
-* Nodejs ou PHP?
-* MySQL?
+* Nodejs
+* MongoDB
 
 ## Features
 
