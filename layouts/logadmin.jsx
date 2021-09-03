@@ -12,7 +12,7 @@ function LogAdmin() {
     async function loginSubmit(e) {
         e.preventDefault();
 
-        const response = await fetch("http://itu-server.herokuapp.com/admin/", { 
+        const response = await fetch("https://itu-server.herokuapp.com/admin/", { 
             method:"POST", 
             headers: {
                 'Accept': 'application/json',
