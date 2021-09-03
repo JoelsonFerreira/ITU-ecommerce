@@ -11,7 +11,7 @@ import { CartContext } from '../contexts/CartContext';
 
 
 function CartPage() {
-    const { cart } = useContext(CartContext);
+    const { cart,getTotalPrice } = useContext(CartContext);
 
     return <div className={styles.container}>
         <NavBar/>
@@ -31,7 +31,7 @@ function CartPage() {
                 <Link href = "/payPage">
                     <button className={styles.endButton}>Finalizar Compra</button>
                 </Link>
-                <h3 className = {styles.finalPrice}>Total: R$ {cart.reduce((x,v) => x + (v.price * v.quant),0).toFixed(2)}</h3>
+                <h3 className = {styles.finalPrice}>Total: R$ {getTotalPrice()}</h3>
             </div>
             }
         </main>

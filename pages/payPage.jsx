@@ -2,14 +2,17 @@ import navstyles from "../styles/Navbar.module.css";
 import styles from "../styles/Admin.module.css";
 
 import { useState } from 'react';
+import { useContext } from 'react';
 
 import InputMask from "react-input-mask";
 import Link from "next/link";
 
 
+import { CartContext } from '../contexts/CartContext';
 
-function PayPage({ sum_price = 299.99 }){
+function PayPage({ sum_price = 0.0 }){
     const [ phone, setPhone ] = useState("");
+    const { getTotalPrice } = useContext(CartContext);
 
     return (
         <>
@@ -30,7 +33,7 @@ function PayPage({ sum_price = 299.99 }){
                         onChange={e => setPhone(e.target.value)} 
                     />
 
-                    <p className={styles.sumPrice} >Total: R$ {sum_price} </p>
+                    <p className={styles.sumPrice} >Total: R$ {getTotalPrice()} </p>
                     
                     <div className={styles.buttonsContainer}>
                         <Link href = "cartPage">
