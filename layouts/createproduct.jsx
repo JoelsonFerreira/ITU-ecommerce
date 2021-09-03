@@ -1,7 +1,7 @@
 import navstyles from "../styles/Navbar.module.css";
 import styles from "../styles/Admin.module.css";
 
-function LogAdmin() {
+function CreateProduct(){
     return (
         <>
             <nav className={navstyles.navbar}>
@@ -10,12 +10,14 @@ function LogAdmin() {
                 </div>
             </nav>
             <main className={styles.container}>
-                <form className={styles.adminform}>
-                    <input type="text" placeholder="Digite o usuario"/>
-                    <input type="password" placeholder="Digite sua senha"/>
+                <form className={styles.adminform}> 
+                    <input type="text" placeholder="Nome do produto"/>
+                    <input type="text" placeholder="Preço"/>
+                    <input type="text" placeholder="Ícone do jogo"/>
+                    <input type="text" placeholder="Quantidade de Produtos"/>
                     <div className={styles.buttonsContainer}>
                         <button className={styles.secondary_button}>Voltar</button>
-                        <button className={styles.primary_button}>Logar</button> 
+                        <button className={styles.primary_button}>Adicionar</button>
                     </div>
                 </form>
             </main>
@@ -23,4 +25,4 @@ function LogAdmin() {
     )
 }
 
-export default LogAdmin;
+export default CreateProduct;
