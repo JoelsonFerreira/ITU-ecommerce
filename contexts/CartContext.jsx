@@ -5,7 +5,8 @@ export const CartContext = createContext({
     addProduct: (product) => {},
     removeProduct: (product) => {},
     incrementProduct: (product,stock_qnt) => {},
-    decrementProduct: (product) => {}
+    decrementProduct: (product) => {},
+    getTotalPrice: () => {}
 });
 
 export const CartProvider = ({ children }) => {
@@ -30,6 +31,11 @@ export const CartProvider = ({ children }) => {
             setCart(newCart);
         }
 
+    }
+
+    const getTotalPrice = () => {
+        //console.log("foi")
+        return cart.reduce((x,v) => x + (v.price * v.quant),0).toFixed(2);
     }
 
     const incrementProduct = (product,stock_qnt) => {
@@ -65,7 +71,8 @@ export const CartProvider = ({ children }) => {
             addProduct,
             removeProduct,
             incrementProduct,
-            decrementProduct
+            decrementProduct,
+            getTotalPrice
         }}>
             { children }
         </CartContext.Provider>
