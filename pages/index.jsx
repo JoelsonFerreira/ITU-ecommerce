@@ -46,7 +46,7 @@ export default function Home({ products }) {
 }
 
 export async function getServerSideProps(context) {
-  const response = await fetch("https://itu-server.herokuapp.com/products/")
+  const response = await fetch("https://itu-server.herokuapp.com/products/");
   const products = await response.json();
 
   return {

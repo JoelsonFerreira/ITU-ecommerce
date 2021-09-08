@@ -14,7 +14,7 @@ function CartPage() {
     const { cart,getTotalPrice } = useContext(CartContext);
 
     return <div className={styles.container}>
-        <NavBar/>
+        <NavBar onSearch={() => {}}/>
         <main>
             <div>
             {
