@@ -16,7 +16,7 @@ function PayPage(){
     const { getTotalPrice, cart } = useContext(CartContext);
 
     async function buy(data) {
-        const response = await fetch("https://itu-server.herokuapp.com/products/", { 
+        const response = await fetch("https://itu-server.heroku.app/buy/", { 
             method:"POST", 
             headers: {
                 'Accept': 'application/json',

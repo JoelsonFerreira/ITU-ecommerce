@@ -14,8 +14,7 @@ function CreateProduct() {
 
     async function loginSubmit(e) {
         e.preventDefault();
-
-        const response = await fetch("https://itu-server.herokuapp.com/products/", { 
+        const response = await fetch("https://itu-server.heroku.app/products/", { 
             method:"POST", 
             headers: {
                 'Accept': 'application/json',
