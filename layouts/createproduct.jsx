@@ -12,8 +12,9 @@ function CreateProduct() {
     const [ imageUrl, setImageUrl ] = useState("");
     const [ quant, setQuant ]       = useState("");
 
-    async function loginSubmit(e) {
+    async function productSubmit(e) {
         e.preventDefault();
+
         const response = await fetch("https://itu-server.herokuapp.com/products/", { 
             method:"POST", 
             headers: {
@@ -38,7 +39,7 @@ function CreateProduct() {
 
         const status = response.status;
 
-        if(status == 201) {
+        if(status == 201 || status == 200) {
             alert("Produto adicionado com sucesso!");
         } else if(status == 401) {
             alert("Você não está autenticado!");
@@ -54,13 +55,13 @@ function CreateProduct() {
                 </div>
             </nav>
             <main className={styles.container} >
-                <form className={styles.adminform} onSubmit={loginSubmit}> 
+                <form className={styles.adminform} onSubmit={productSubmit}> 
                     <input value={name}     onChange={e => setName(e.target.value)}     type="text" placeholder="Nome do produto" />
                     <input value={price}    onChange={e => setPrice(e.target.value)}    type="text" placeholder="Preço"/>
                     <input value={imageUrl} onChange={e => setImageUrl(e.target.value)} type="text" placeholder="Ícone do jogo"/>
                     <input value={quant}    onChange={e => setQuant(e.target.value)}    type="text" placeholder="Quantidade de Produtos"/>
                     <div className={styles.buttonsContainer}>
-                        <button className={styles.secondary_button}>Voltar</button>
+                        <button className={styles.secondary_button} type="button" >Voltar</button>
                         <button className={styles.primary_button} type="submit">Adicionar</button>
                     </div>
                 </form>

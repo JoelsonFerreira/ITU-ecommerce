@@ -53,7 +53,7 @@ function LogAdmin() {
                         value={password} onChange={e => setPassword(e.target.value)} 
                     />
                     <div className={styles.buttonsContainer}>
-                        <button className={styles.secondary_button}>Voltar</button>
+                        <button className={styles.secondary_button} type="button">Voltar</button>
                         <button className={styles.primary_button} type="submit">Logar</button> 
                     </div>
                 </form>
