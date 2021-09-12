@@ -2,10 +2,9 @@ import styles from '../styles/Cart.module.css';
 
 import Link from 'next/link';
 
-import NavBar from '../components/navbar';
+import navstyles from "../styles/Navbar.module.css";
 import ProductCart from '../components/productCart';
 
-import products from "../data/products";
 import { useContext } from 'react';
 import { CartContext } from '../contexts/CartContext';
 
@@ -14,7 +13,15 @@ function CartPage() {
     const { cart,getTotalPrice } = useContext(CartContext);
 
     return <div className={styles.container}>
-        <NavBar onSearch={() => {}}/>
+        <nav className={navstyles.navbar}>
+            <div className={navstyles.nav_left}>
+                <Link href="/">
+                    <a>
+                        <h1 className={navstyles.nav_left_title}>ITU</h1>
+                    </a>
+                </Link>
+            </div>
+        </nav>
         <main>
             <div>
             {

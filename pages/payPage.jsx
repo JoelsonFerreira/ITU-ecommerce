@@ -50,7 +50,11 @@ function PayPage(){
         <>
             <nav className={navstyles.navbar}>
                 <div className={navstyles.nav_left}>
-                    <h1 className ={navstyles.nav_left_title}>ITU</h1>
+                    <Link href="/">
+                        <a>
+                            <h1 className={styles.nav_left_title}>ITU</h1>
+                        </a>
+                    </Link>
                 </div>
             </nav>
             <main className={styles.container}>

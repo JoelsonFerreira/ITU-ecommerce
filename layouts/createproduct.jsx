@@ -2,6 +2,7 @@ import navstyles from "../styles/Navbar.module.css";
 import styles from "../styles/Admin.module.css";
 import { useContext, useState } from "react";
 import { AdminContext } from "../contexts/AdminContext";
+import Link from "next/link";
 
 function CreateProduct() {
 
@@ -51,7 +52,11 @@ function CreateProduct() {
         <>
             <nav className={navstyles.navbar}>
                 <div className={navstyles.nav_left}>
-                    <h1 className ={navstyles.nav_left_title}>ITU</h1>
+                    <Link href="/">
+                        <a>
+                            <h1 className={styles.nav_left_title}>ITU</h1>
+                        </a>
+                    </Link>
                 </div>
             </nav>
             <main className={styles.container} >
@@ -61,7 +66,6 @@ function CreateProduct() {
                     <input value={imageUrl} onChange={e => setImageUrl(e.target.value)} type="text" placeholder="Ícone do jogo"/>
                     <input value={quant}    onChange={e => setQuant(e.target.value)}    type="text" placeholder="Quantidade de Produtos"/>
                     <div className={styles.buttonsContainer}>
-                        <button className={styles.secondary_button} type="button" >Voltar</button>
                         <button className={styles.primary_button} type="submit">Adicionar</button>
                     </div>
                 </form>

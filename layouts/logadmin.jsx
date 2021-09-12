@@ -2,6 +2,7 @@ import navstyles from "../styles/Navbar.module.css";
 import styles from "../styles/Admin.module.css";
 import { useContext, useState } from "react";
 import { AdminContext } from "../contexts/AdminContext";
+import Link from "next/link";
 
 function LogAdmin() {
     const { auth } = useContext(AdminContext);
@@ -37,7 +38,11 @@ function LogAdmin() {
         <>
             <nav className={navstyles.navbar}>
                 <div className={navstyles.nav_left}>
-                    <h1 className ={navstyles.nav_left_title}>ITU</h1>
+                    <Link href="/">
+                        <a>
+                            <h1 className={styles.nav_left_title}>ITU</h1>
+                        </a>
+                    </Link>
                 </div>
             </nav>
             <main className={styles.container}>
@@ -53,7 +58,6 @@ function LogAdmin() {
                         value={password} onChange={e => setPassword(e.target.value)} 
                     />
                     <div className={styles.buttonsContainer}>
-                        <button className={styles.secondary_button} type="button">Voltar</button>
                         <button className={styles.primary_button} type="submit">Logar</button> 
                     </div>
                 </form>
